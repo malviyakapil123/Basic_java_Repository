@@ -38,8 +38,19 @@ public class TestCollection {
 		j.add("raja");
 		j.add(52.22);		
 		j.add("aman");
-		j.addAll(l);
+		
 		System.out.println(j);
+		
+		List u = new ArrayList();
+		u.add(5);
+		u.add('h');
+		
+		u.add(52.22);		
+		u.add("aman");
+		
+		j.retainAll(u);
+		System.out.println("jjjjj"+j);
+		System.out.println(u);
 		
 		List a= new LinkedList();
 		a.add(5);
