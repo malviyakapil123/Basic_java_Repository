@@ -6,7 +6,7 @@ public class Exircise_7 {
 
 	public static void main(String[] args) {
 		
-		LinkedList j = new  LinkedList<>();
+		LinkedList j = new  LinkedList();
 		
 		 j.add(45);
 		 j.add(42);
@@ -18,6 +18,9 @@ public class Exircise_7 {
 		 j.add(12);
 		 j.add(4844);
 		 System.out.println(j);
+		 
+		 int middle = (int) (j.get(j.size()/2));
+		 System.out.println(middle);
 		
 		
 	
