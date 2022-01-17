@@ -7,7 +7,7 @@ import java.io.ObjectOutputStream;
 public class WriteStudent {
 
 	public static void main(String[] args) throws Exception {
-		FileOutputStream file = new FileOutputStream("E:/Student1.ser");
+		FileOutputStream file = new FileOutputStream("D:/student.ser");
 	    ObjectOutputStream out = new ObjectOutputStream(file);
 
 	    Student s= new Student();
@@ -19,9 +19,9 @@ public class WriteStudent {
 	    System.out.println("Roll number  "+s.getRollno());
 	    System.out.println("Age of Student  "+s.getAge());
 	    
-	    out.close();
+	    out.writeObject(s);
 	    file.close();
-	    
+	    System.out.println("Serializable program");
 	}
 
 }

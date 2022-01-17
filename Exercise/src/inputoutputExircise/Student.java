@@ -29,17 +29,18 @@ public class Student implements Externalizable{
 		this.age = age;
 	}
 	@Override
-	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
-		name =(String) in.readObject();
-		rollno =(String) in.readObject();
-		age =in.readInt();
-	}
-	@Override
 	public void writeExternal(ObjectOutput out) throws IOException {
 		out.writeObject(name);
 		out.writeObject(rollno);
 		out.writeInt(age);
 	}
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		name =(String) in.readObject();
+		rollno =(String) in.readObject();
+		age =in.readInt();
+	}
+	
 	
 	
 
